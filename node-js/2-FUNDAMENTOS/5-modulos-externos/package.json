@@ -1,0 +1,20 @@
+{
+  "name": "node.js-express-mongodb-mysql-react.js-arquitetura-mvc-",
+  "version": "1.0.0",
+  "description": "estudos sobre npm",
+  "homepage": "https://github.com/LucasDuarteV/Node.js-Express-MongoDB-MySQL-React.js-arquitetura-MVC-#readme",
+  "bugs": {
+    "url": "https://github.com/LucasDuarteV/Node.js-Express-MongoDB-MySQL-React.js-arquitetura-MVC-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasDuarteV/Node.js-Express-MongoDB-MySQL-React.js-arquitetura-MVC-.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
