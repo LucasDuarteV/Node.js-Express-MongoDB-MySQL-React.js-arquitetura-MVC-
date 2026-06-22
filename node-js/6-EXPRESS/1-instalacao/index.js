@@ -11,6 +11,7 @@ const checkAuth = function(req , res , next){
         next()
     } else {
         console.log("Não está logado, fala login para continuar!")
+        next()
     }
 }
 
