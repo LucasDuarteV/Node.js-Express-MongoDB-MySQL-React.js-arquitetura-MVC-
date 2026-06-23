@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Cadastro de usuário</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Home express</h1>
+
+<h1>Adicionar usuário</h1>
+
+<form action="/users/save" method="POST">
+    <input type="text" name="name" placeholder="Nome">
+    <input type="number" name="age" placeholder="Idade">
+
+    <button type="submit">Enviar</button>
+</form>
+
 </body>
 </html>
