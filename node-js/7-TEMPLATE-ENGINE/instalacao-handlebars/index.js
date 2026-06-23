@@ -11,7 +11,16 @@ app.set('views', './views')
 
 // Rota principal
 app.get('/', (req, res) => {
-    res.render('home')
+
+    const user ={
+        name: 'Lucas',
+        surname: 'Duarte',
+        age: 22
+    }
+
+    const palavra = 'Siiiiiiiiiu'
+
+    res.render('home' , {user: user , palavra})
 })
 
 // Inicia servidor
