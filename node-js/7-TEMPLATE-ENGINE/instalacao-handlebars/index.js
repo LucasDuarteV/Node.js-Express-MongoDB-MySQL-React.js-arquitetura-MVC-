@@ -1,11 +1,15 @@
 const express = require('express')
-const { engine } = require('express-handlebars')
+const exphbs = require('express-handlebars')
 
 const app = express()
 const port = 3000
 
+const hbs = exphbs.create({
+    partialsDir: ['views/partials'],
+})
+
 // Configuração do Handlebars
-app.engine('handlebars', engine())
+app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 app.set('views', './views')
 
@@ -25,6 +29,32 @@ app.get('/post' , (req , res) =>{
     }
 
     res.render('blogpost' , {post})
+})
+
+app.get('/blog' , (req , res) =>{
+    const posts =[
+        {
+            title: 'Aprender node.js',
+            category: 'JavaScript',
+            body: 'Teste',
+            comments: 4
+        },
+          {
+            title: 'Aprender Python',
+            category: 'Python',
+            body: 'Teste',
+            comments: 4
+        },
+        
+          {
+            title: 'Aprender .NET',
+            category: 'C#',
+            body: 'Teste',
+            comments: 4
+        }
+    ]
+
+    res.render('blog' , {posts})
 })
 
 app.get('/', (req, res) => {
