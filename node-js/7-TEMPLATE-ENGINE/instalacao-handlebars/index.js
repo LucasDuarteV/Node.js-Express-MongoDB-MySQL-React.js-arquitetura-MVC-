@@ -10,7 +10,10 @@ app.set('view engine', 'handlebars')
 app.set('views', './views')
 
 app.get('/dashboard' , (req , res) =>{
-    res.render('dashboard')
+
+    const items = ["Item a" , "Item b" , "Item c"]
+
+    res.render('dashboard' , {items})
 })
 
 app.get('/', (req, res) => {
