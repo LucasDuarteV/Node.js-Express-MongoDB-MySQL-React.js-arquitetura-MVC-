@@ -7,6 +7,15 @@
 
 <p>{{palavra}}</p>
 
+{{#if aproved}}
+<p>
+    Parabéns, seu cadastro foi aprovado!
+</p>
+{{else}}
+<p>
+    Seu cadastro foi reprovado!
+</p>
+{{/if}}
 {{#if auth}}
     <p>
         Você está autenticado, 

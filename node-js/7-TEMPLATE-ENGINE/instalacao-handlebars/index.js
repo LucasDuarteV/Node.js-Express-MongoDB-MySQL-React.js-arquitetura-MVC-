@@ -23,9 +23,11 @@ app.get('/', (req, res) => {
 
     const palavra = 'Siiiiiiiiiu'
 
-    const auth = true
+    const auth = false
 
-    res.render('home' , {user: user , palavra , auth})
+    const aproved = true
+
+    res.render('home' , {user: user , palavra , auth, aproved})
 })
 
 // Inicia servidor
