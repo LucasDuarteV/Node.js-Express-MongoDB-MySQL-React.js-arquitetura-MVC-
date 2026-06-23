@@ -9,7 +9,10 @@ app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
 app.set('views', './views')
 
-// Rota principal
+app.get('/dashboard' , (req , res) =>{
+    res.render('dashboard')
+})
+
 app.get('/', (req, res) => {
 
     const user ={
@@ -20,7 +23,9 @@ app.get('/', (req, res) => {
 
     const palavra = 'Siiiiiiiiiu'
 
-    res.render('home' , {user: user , palavra})
+    const auth = true
+
+    res.render('home' , {user: user , palavra , auth})
 })
 
 // Inicia servidor
