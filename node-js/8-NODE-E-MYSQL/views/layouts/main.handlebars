@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Handlebars!</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Node + MySQL</title>
 </head>
 <body>
-    <h1>Main Handlebars!</h1>
+
+    <header class="navbar">
+        <div class="logo">
+            📚 Meu Sistema de Livros
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/books">Livros</a>
+            <a href="/books/add">Adicionar</a>
+        </nav>
+    </header>
+
+    <main>
+        {{{body}}}
+    </main>
+
 </body>
 </html>
