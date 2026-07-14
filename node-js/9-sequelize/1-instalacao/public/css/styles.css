@@ -5,491 +5,291 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 body {
   background: #f4f4f4;
+  color: #333;
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 #navbar {
-  background: #333;
-  padding: 15px 30px;
-  margin-bottom: 30px;
+  background: #222;
+  padding: 18px 40px;
+  margin-bottom: 40px;
 }
-
 
 #navbar ul {
   list-style: none;
   display: flex;
 }
 
-
-#navbar ul li {
+#navbar li {
   margin-right: 20px;
 }
-
 
 #navbar a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: .3s;
 }
-
 
 #navbar a:hover {
   color: #00bfff;
 }
 
 
-
-/* =========================
-   TITULOS
-========================= */
-
+/* TITULOS */
 
 h1 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: #333;
 }
 
-
-
-/* =========================
-   FORMULARIO
-========================= */
-
-
-.form {
-
-  width: 450px;
-  margin: auto;
-
-  background: white;
-
-  padding: 30px;
-
-  border-radius: 10px;
-
-  box-shadow: 0 4px 15px rgba(0,0,0,.15);
-
+h2 {
+  margin-bottom: 15px;
 }
 
+
+/* FORMULARIOS */
+
+.form,
+.user-details {
+  width: 450px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
 
 
 .form-control {
-
   display: flex;
-
   flex-direction: column;
-
   margin-bottom: 20px;
-
 }
-
 
 
 .form-control label {
-
   font-weight: bold;
-
   margin-bottom: 8px;
-
-  color:#555;
-
+  color: #555;
 }
 
 
-
-.form-control input[type="text"] {
-
+.form-control input {
   padding: 12px;
-
-  border-radius: 6px;
-
-  border:1px solid #ccc;
-
-  outline:none;
-
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
 }
 
 
-
-.form-control input[type="text"]:focus {
-
-  border-color:#007bff;
-
+.form-control input:focus {
+  border-color: #007bff;
 }
-
-
 
 
 /* CHECKBOX */
 
-
 .checkbox {
-
-  display:flex;
-
-  flex-direction:row;
-
-  align-items:center;
-
-  gap:10px;
-
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
-
-
 
 .checkbox input {
-
-  width:18px;
-
-  height:18px;
-
+  width: 18px;
+  height: 18px;
 }
 
 
-
-/* BOTÃO SUBMIT */
-
+/* BOTÕES */
 
 input[type="submit"] {
-
-  width:100%;
-
-  padding:12px;
-
-  background:#007bff;
-
-  color:white;
-
-  border:0;
-
-  border-radius:6px;
-
-  cursor:pointer;
-
-  font-size:16px;
-
-  font-weight:bold;
-
+  width: 100%;
+  padding: 13px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: .3s;
 }
-
 
 input[type="submit"]:hover {
-
-  background:#0056b3;
-
+  background: #0056b3;
 }
 
 
-
-/* =========================
-   LISTA DE USUÁRIOS
-========================= */
-
+/* LISTAGEM */
 
 .users-container {
-
-  width:800px;
-
-  margin:auto;
-
-  display:grid;
-
-  grid-template-columns:repeat(2,1fr);
-
-  gap:20px;
-
+  width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
 }
-
 
 
 .user-card {
-
-  background:white;
-
-  padding:20px;
-
-  border-radius:10px;
-
-  box-shadow:0 4px 15px rgba(0,0,0,.15);
-
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
 }
-
 
 
 .user-card h2 {
-
-  color:#333;
-
-  margin-bottom:10px;
-
+  color: #222;
 }
 
 
-
-.user-card p {
-
-  color:#555;
-
-  margin-bottom:10px;
-
+.user-card p,
+.user-details p {
+  margin-bottom: 10px;
+  color: #555;
 }
 
 
-
-
-/* =========================
-   BOTÕES DE AÇÃO
-========================= */
-
+/* AÇÕES */
 
 .actions {
-
-  display:flex;
-
-  align-items:center;
-
-  gap:10px;
-
-  margin-top:15px;
-
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
 }
 
+
+.actions a,
+.delete-btn {
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 
 .actions a {
-
-  background:#007bff;
-
-  color:white;
-
-  padding:10px 15px;
-
-  border-radius:6px;
-
-  text-decoration:none;
-
-  font-weight:bold;
-
+  background: #007bff;
+  color: white;
 }
-
 
 
 .actions a:hover {
-
-  background:#0056b3;
-
+  background: #0056b3;
 }
-
-
-
-
-/* BOTÃO EDITAR */
 
 
 .edit-btn {
-
-  background:#ffc107 !important;
-
-  color:#333 !important;
-
+  background: #ffc107 !important;
+  color: #222 !important;
 }
-
 
 
 .edit-btn:hover {
-
-  background:#e0a800 !important;
-
+  background: #e0a800 !important;
 }
-
-
-
-/* BOTÃO DELETE */
 
 
 .delete-btn {
-
-  background:#dc3545;
-
-  color:white;
-
-  padding:10px 15px;
-
-  border:0;
-
-  border-radius:6px;
-
-  cursor:pointer;
-
-  font-weight:bold;
-
+  background: #dc3545;
+  color: white;
+  border: none;
 }
-
 
 
 .delete-btn:hover {
-
-  background:#a71d2a;
-
+  background: #a71d2a;
 }
-
-
 
 
 .actions form {
-
-  display:inline;
-
+  display: inline;
 }
 
 
-
-/* =========================
-   STATUS NEWSLETTER
-========================= */
-
+/* NEWSLETTER */
 
 .newsletter {
-
-  color:green !important;
-
-  font-weight:bold;
-
+  color: #198754 !important;
+  font-weight: bold;
 }
-
 
 
 .no-newsletter {
-
-  color:red !important;
-
-  font-weight:bold;
-
+  color: #dc3545 !important;
+  font-weight: bold;
 }
 
 
+/* ENDEREÇO */
 
-
-/* =========================
-   DETALHES DO USUÁRIO
-========================= */
-
-
-.user-details {
-
-  width:450px;
-
-  margin:auto;
-
-  background:white;
-
-  padding:30px;
-
-  border-radius:10px;
-
-  box-shadow:0 4px 15px rgba(0,0,0,.15);
-
+.address {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 5px solid #007bff;
 }
 
 
-
-.user-details p {
-
-  margin-bottom:15px;
-
-  color:#555;
-
-}
-
-
-
-
-/* BOTÃO VOLTAR */
-
+/* VOLTAR */
 
 .back {
-
-  display:block;
-
-  width:120px;
-
-  margin:20px auto;
-
-  text-align:center;
-
-  background:#333;
-
-  color:white;
-
-  padding:10px;
-
-  text-decoration:none;
-
-  border-radius:6px;
-
+  display: block;
+  width: 120px;
+  margin: 25px auto;
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 12px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
 }
-
 
 
 .back:hover {
-
-  background:#555;
-
+  background: #555;
 }
 
 
-
-
-
-/* =========================
-   RESPONSIVO
-========================= */
-
+/* RESPONSIVO */
 
 @media(max-width:850px){
 
-
   .users-container {
-
-    width:90%;
-
-    grid-template-columns:1fr;
-
+    width: 90%;
+    grid-template-columns: 1fr;
   }
 
 
   .form,
   .user-details {
-
-    width:90%;
-
+    width: 90%;
   }
 
 
   .actions {
-
-    flex-direction:column;
-
-    align-items:stretch;
-
+    flex-direction: column;
+    align-items: stretch;
   }
 
 
   .actions a,
   .delete-btn {
-
-    text-align:center;
-
-    width:100%;
-
+    width: 100%;
+    text-align: center;
   }
 
 }
