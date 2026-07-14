@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const conn = require('./db/conn')
 
 const User = require('./models/User')
+const Adress = require('./models/Adress')
 
 const app = express()
 
@@ -102,8 +103,9 @@ app.get('/', async (req, res) => {
   res.render('home' , {users: users})
 })
 
-conn.sync()
-//.sync({force: true})
+conn
+//.sync()
+.sync({force: true})
 .then(() =>{
   app.listen(3000)
 })
