@@ -1,1 +1,16 @@
-<h1>Olá Sequelize</h1>
+<h1>Usuários cadastrados</h1>
+
+<div class="users-container">
+  {{#each users}}
+    <div class="user-card">
+      <h2>{{name}}</h2>
+      <p><strong>Profissão:</strong> {{occupation}}</p>
+
+      {{#if newsletter}}
+        <p class="newsletter">Recebe promoções: Sim</p>
+      {{else}}
+        <p class="no-newsletter">Recebe promoções: Não</p>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>
