@@ -1,7 +1,10 @@
 <h1>Editando: {{user.name}}</h1>
 
 
-<form action="/users/edit/{{user.id}}" method="POST" class="form">
+<form action="/users/update" method="POST" class="form">
+
+
+<input type="hidden" name="id" value="{{user.id}}">
 
 
 <div class="form-control">
@@ -68,6 +71,7 @@ value="Salvar alterações">
 
 
 </form>
+
 
 
 <a class="back" href="/">
