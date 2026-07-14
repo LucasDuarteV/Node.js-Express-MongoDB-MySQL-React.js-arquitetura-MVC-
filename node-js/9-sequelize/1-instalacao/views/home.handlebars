@@ -17,13 +17,8 @@
 
 
 <p>
-
-<strong>
-Profissão:
-</strong>
-
+<strong>Profissão:</strong>
 {{this.occupation}}
-
 </p>
 
 
@@ -59,11 +54,17 @@ Ver detalhes
 
 
 
+<a href="/users/edit/{{this.id}}" class="edit-btn">
+Editar
+</a>
+
+
+
 
 <form action="/users/delete/{{this.id}}" method="POST">
 
 
-<button class="delete-btn">
+<button type="submit" class="delete-btn">
 
 Excluir
 
@@ -79,7 +80,6 @@ Excluir
 
 
 </div>
-
 
 
 {{/each}}

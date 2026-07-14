@@ -1,153 +1,447 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
-body{
-
-background:#f4f4f4;
-
+body {
+  background: #f4f4f4;
 }
 
 
+/* =========================
+   NAVBAR
+========================= */
 
-#navbar{
-
-background:#333;
-
-padding:15px 30px;
-
-margin-bottom:30px;
-
+#navbar {
+  background: #333;
+  padding: 15px 30px;
+  margin-bottom: 30px;
 }
 
 
-#navbar ul{
-
-list-style:none;
-
-display:flex;
-
+#navbar ul {
+  list-style: none;
+  display: flex;
 }
 
 
-#navbar a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-
+#navbar ul li {
+  margin-right: 20px;
 }
 
 
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 
-h1{
-
-text-align:center;
-
-margin-bottom:25px;
-
-color:#333;
-
+#navbar a:hover {
+  color: #00bfff;
 }
 
 
 
+/* =========================
+   TITULOS
+========================= */
 
-.form{
 
-width:450px;
-
-margin:auto;
-
-background:white;
-
-padding:30px;
-
-border-radius:10px;
-
-box-shadow:0 4px 15px #ccc;
-
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
 }
 
 
 
+/* =========================
+   FORMULARIO
+========================= */
 
-.form-control{
 
-display:flex;
+.form {
 
-flex-direction:column;
+  width: 450px;
+  margin: auto;
 
-margin-bottom:20px;
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,.15);
 
 }
 
 
 
-.form-control input{
+.form-control {
 
-padding:12px;
+  display: flex;
 
-border-radius:6px;
+  flex-direction: column;
 
-border:1px solid #ccc;
-
-}
-
-
-
-
-.checkbox{
-
-flex-direction:row;
-
-gap:10px;
+  margin-bottom: 20px;
 
 }
 
 
 
+.form-control label {
 
-input[type="submit"]{
+  font-weight: bold;
 
-width:100%;
+  margin-bottom: 8px;
 
-padding:12px;
+  color:#555;
 
-background:#007bff;
+}
 
-color:white;
 
-border:0;
 
-border-radius:6px;
+.form-control input[type="text"] {
 
-cursor:pointer;
+  padding: 12px;
+
+  border-radius: 6px;
+
+  border:1px solid #ccc;
+
+  outline:none;
+
+}
+
+
+
+.form-control input[type="text"]:focus {
+
+  border-color:#007bff;
 
 }
 
 
 
 
+/* CHECKBOX */
 
-.users-container{
 
-width:800px;
+.checkbox {
 
-margin:auto;
+  display:flex;
 
-display:grid;
+  flex-direction:row;
 
-grid-template-columns:repeat(2,1fr);
+  align-items:center;
 
-gap:20px;
+  gap:10px;
+
+}
+
+
+
+.checkbox input {
+
+  width:18px;
+
+  height:18px;
+
+}
+
+
+
+/* BOTÃO SUBMIT */
+
+
+input[type="submit"] {
+
+  width:100%;
+
+  padding:12px;
+
+  background:#007bff;
+
+  color:white;
+
+  border:0;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  font-size:16px;
+
+  font-weight:bold;
+
+}
+
+
+input[type="submit"]:hover {
+
+  background:#0056b3;
+
+}
+
+
+
+/* =========================
+   LISTA DE USUÁRIOS
+========================= */
+
+
+.users-container {
+
+  width:800px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:20px;
+
+}
+
+
+
+.user-card {
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:10px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+}
+
+
+
+.user-card h2 {
+
+  color:#333;
+
+  margin-bottom:10px;
+
+}
+
+
+
+.user-card p {
+
+  color:#555;
+
+  margin-bottom:10px;
+
+}
+
+
+
+
+/* =========================
+   BOTÕES DE AÇÃO
+========================= */
+
+
+.actions {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-top:15px;
+
+}
+
+
+
+.actions a {
+
+  background:#007bff;
+
+  color:white;
+
+  padding:10px 15px;
+
+  border-radius:6px;
+
+  text-decoration:none;
+
+  font-weight:bold;
+
+}
+
+
+
+.actions a:hover {
+
+  background:#0056b3;
+
+}
+
+
+
+
+/* BOTÃO EDITAR */
+
+
+.edit-btn {
+
+  background:#ffc107 !important;
+
+  color:#333 !important;
+
+}
+
+
+
+.edit-btn:hover {
+
+  background:#e0a800 !important;
+
+}
+
+
+
+/* BOTÃO DELETE */
+
+
+.delete-btn {
+
+  background:#dc3545;
+
+  color:white;
+
+  padding:10px 15px;
+
+  border:0;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  font-weight:bold;
+
+}
+
+
+
+.delete-btn:hover {
+
+  background:#a71d2a;
+
+}
+
+
+
+
+.actions form {
+
+  display:inline;
+
+}
+
+
+
+/* =========================
+   STATUS NEWSLETTER
+========================= */
+
+
+.newsletter {
+
+  color:green !important;
+
+  font-weight:bold;
+
+}
+
+
+
+.no-newsletter {
+
+  color:red !important;
+
+  font-weight:bold;
+
+}
+
+
+
+
+/* =========================
+   DETALHES DO USUÁRIO
+========================= */
+
+
+.user-details {
+
+  width:450px;
+
+  margin:auto;
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:10px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+}
+
+
+
+.user-details p {
+
+  margin-bottom:15px;
+
+  color:#555;
+
+}
+
+
+
+
+/* BOTÃO VOLTAR */
+
+
+.back {
+
+  display:block;
+
+  width:120px;
+
+  margin:20px auto;
+
+  text-align:center;
+
+  background:#333;
+
+  color:white;
+
+  padding:10px;
+
+  text-decoration:none;
+
+  border-radius:6px;
+
+}
+
+
+
+.back:hover {
+
+  background:#555;
 
 }
 
@@ -155,165 +449,47 @@ gap:20px;
 
 
 
-.user-card{
-
-background:white;
-
-padding:20px;
-
-border-radius:10px;
-
-box-shadow:0 4px 15px #ccc;
-
-}
-
-
-
-
-.actions{
-
-display:flex;
-
-gap:10px;
-
-margin-top:15px;
-
-}
-
-
-
-.actions a{
-
-background:#007bff;
-
-color:white;
-
-padding:10px;
-
-border-radius:6px;
-
-text-decoration:none;
-
-}
-
-
-
-
-.delete-btn{
-
-background:#dc3545;
-
-color:white;
-
-padding:10px 15px;
-
-border:0;
-
-border-radius:6px;
-
-cursor:pointer;
-
-font-weight:bold;
-
-}
-
-
-
-.delete-btn:hover{
-
-background:#a71d2a;
-
-}
-
-
-
-
-
-.newsletter{
-
-color:green;
-
-font-weight:bold;
-
-}
-
-
-
-.no-newsletter{
-
-color:red;
-
-font-weight:bold;
-
-}
-
-
-
-
-
-.user-details{
-
-width:450px;
-
-margin:auto;
-
-background:white;
-
-padding:30px;
-
-border-radius:10px;
-
-box-shadow:0 4px 15px #ccc;
-
-}
-
-
-
-
-.back{
-
-display:block;
-
-width:100px;
-
-margin:20px auto;
-
-text-align:center;
-
-background:#333;
-
-color:white;
-
-padding:10px;
-
-text-decoration:none;
-
-border-radius:6px;
-
-}
-
-
-
+/* =========================
+   RESPONSIVO
+========================= */
 
 
 @media(max-width:850px){
 
 
-.users-container{
+  .users-container {
 
-width:90%;
+    width:90%;
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
 
-}
+  }
 
 
-.form,
-.user-details{
+  .form,
+  .user-details {
 
-width:90%;
+    width:90%;
 
-}
+  }
 
+
+  .actions {
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+  }
+
+
+  .actions a,
+  .delete-btn {
+
+    text-align:center;
+
+    width:100%;
+
+  }
 
 }
