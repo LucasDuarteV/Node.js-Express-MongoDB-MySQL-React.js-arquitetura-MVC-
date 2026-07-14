@@ -103,6 +103,7 @@ app.get('/', async (req, res) => {
 })
 
 conn.sync()
+//.sync({force: true})
 .then(() =>{
   app.listen(3000)
 })
