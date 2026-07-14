@@ -1,23 +1,72 @@
-<h1>{{user.name}}</h1>
+<h1>
+{{user.name}}
+</h1>
+
+
 
 <div class="user-details">
 
-  <p>
-    <strong>Profissão:</strong> {{user.occupation}}
-  </p>
 
-  {{#if user.newsletter}}
-    <p class="newsletter">
-      Recebe promoções: Sim
-    </p>
-  {{else}}
-    <p class="no-newsletter">
-      Recebe promoções: Não
-    </p>
-  {{/if}}
+<p>
+
+<strong>
+Profissão:
+</strong>
+
+{{user.occupation}}
+
+</p>
+
+
+
+
+{{#if user.newsletter}}
+
+<p class="newsletter">
+
+Recebe promoções: Sim
+
+</p>
+
+
+{{else}}
+
+
+<p class="no-newsletter">
+
+Recebe promoções: Não
+
+</p>
+
+
+{{/if}}
+
+
+
+
+
+<form action="/users/delete/{{user.id}}" method="POST">
+
+
+<button class="delete-btn">
+
+Excluir usuário
+
+</button>
+
+
+</form>
+
+
 
 </div>
 
+
+
+
+
 <a class="back" href="/">
-  Voltar
+
+Voltar
+
 </a>
